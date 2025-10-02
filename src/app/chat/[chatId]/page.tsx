@@ -16,6 +16,7 @@ interface Message {
     username: string;
   };
   content: string;
+  chat: string;
   replyTo?: Message; // Optional, as not all messages are replies
 }
 
