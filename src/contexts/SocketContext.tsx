@@ -19,7 +19,7 @@ export const SocketProvider = ({ children }: { children: React.ReactNode }) => {
   const [socket, setSocket] = useState<Socket | null>(null);
 
   useEffect(() => {
-    const newSocket = io('http://localhost:5000');
+    const newSocket = io('https://chatapp-production-22cf.up.railway.app');
 
     setSocket(newSocket);
 

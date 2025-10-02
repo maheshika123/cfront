@@ -31,7 +31,7 @@ const AuthForm = () => {
       }
     }
 
-    const url = isLogin ? 'http://localhost:5000/api/auth/login' : 'http://localhost:5000/api/auth/register';
+    const url = isLogin ? 'https://chatapp-production-22cf.up.railway.app/api/auth/login' : 'https://chatapp-production-22cf.up.railway.app/api/auth/register';
     const payload = isLogin ? { username, password } : { name, email, username, password };
 
     try {

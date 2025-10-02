@@ -21,7 +21,7 @@ const RegistrationForm = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/register', { name, email });
+      const response = await axios.post('https://chatapp-production-22cf.up.railway.app/api/auth/register', { name, email });
       setSuccess(`Registration successful! Your user ID is: ${response.data._id}`);
       setName('');
       setEmail('');

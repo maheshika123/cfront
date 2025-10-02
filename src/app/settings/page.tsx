@@ -31,7 +31,7 @@ const SettingsScreen = () => {
           return;
         }
 
-        const response = await axios.get('http://localhost:5000/api/users/me', {
+        const response = await axios.get('https://chatapp-production-22cf.up.railway.app/api/users/me', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setUser(response.data);

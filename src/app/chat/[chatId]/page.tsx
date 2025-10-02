@@ -47,7 +47,7 @@ const ChatScreen = () => {
     const fetchCurrentUser = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://localhost:5000/api/users/me', {
+        const response = await axios.get('https://chatapp-production-22cf.up.railway.app/api/users/me', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setCurrentUser(response.data);
@@ -63,7 +63,7 @@ const ChatScreen = () => {
     const fetchMessages = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get(`http://localhost:5000/api/messages/${chatId}`,
+        const response = await axios.get(`https://chatapp-production-22cf.up.railway.app/api/messages/${chatId}`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
         setMessages(response.data);

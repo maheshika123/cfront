@@ -31,7 +31,7 @@ const NewChatScreen = () => {
       try {
         const token = localStorage.getItem('token');
         const response = await axios.get(
-          `http://localhost:5000/api/users/search?userId=${searchQuery}`,
+          `https://chatapp-production-22cf.up.railway.app/api/users/search?userId=${searchQuery}`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
         setSearchResults(response.data);
@@ -53,7 +53,7 @@ const NewChatScreen = () => {
     try {
       const token = localStorage.getItem('token');
       await axios.post(
-        'http://localhost:5000/api/users/add-friend',
+        'https://chatapp-production-22cf.up.railway.app/api/users/add-friend',
         { friendId },
         { headers: { Authorization: `Bearer ${token}` } }
       );

@@ -29,7 +29,7 @@ const ChatList = () => {
     const fetchCurrentUser = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://localhost:5000/api/users/me', {
+        const response = await axios.get('https://chatapp-production-22cf.up.railway.app/api/users/me', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setCurrentUser(response.data);
@@ -45,7 +45,7 @@ const ChatList = () => {
     const fetchFriends = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://localhost:5000/api/users/friends', {
+        const response = await axios.get('https://chatapp-production-22cf.up.railway.app/api/users/friends', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setFriends(response.data);
